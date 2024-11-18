@@ -72,8 +72,8 @@ const QuickActions = () => (
       <CardContent className="p-4 flex items-center space-x-3">
         <PlusSquare className="w-6 h-6 text-blue-600" />
         <div>
-          <h3 className="font-medium">Request Records Riht Now</h3>
-          <p className="text-sm text-gray-600">From your trusted providers</p>
+          <h3 className="font-medium">Request Records</h3>
+          <p className="text-sm text-gray-600">From your providers</p>
         </div>
       </CardContent>
     </Card>
