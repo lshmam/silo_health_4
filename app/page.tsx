@@ -6,6 +6,7 @@ import Onboarding from '@/components/Onboarding';
 import Dashboard from '@/components/Dashboard';
 import RecordViewer from '@/components/RecordViewer';
 
+
 // Types
 interface Record {
   id: string;

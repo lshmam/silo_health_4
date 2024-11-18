@@ -1,6 +1,25 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
+import {Roboto, Zen_Dots, Orbitron} from 'next/font/google'
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: '400',
+})
+
+const zenDots = Zen_Dots({
+  subsets: ['latin'],
+  weight: '400',
+})
+
+const orbitron = Orbitron({
+  subsets: ['latin'],
+  weight: '700',
+})
+
+
 import { 
   Card, 
   CardHeader, 
@@ -36,9 +55,22 @@ interface DashboardProps {
 
 // Header Component
 const Header = () => (
-  <header className="px-4 py-3 bg-white border-b">
+  <header className="px-4 py-3 bg-green-100
+   border-b">
     <div className="flex items-center justify-between">
-      <h1 className="text-xl font-semibold text-gray-900">Silo Health</h1>
+    <Image
+            src="/images/logo.svg" // or logo.png
+            alt="Silo Health Logo"
+            width={40}
+            height={40}
+
+            className="h-10 w-auto"
+          />
+      <h1  className={orbitron.className} >
+        <span className = "text-3xl text-slate-800">
+          Silo Health
+        </span>
+          </h1>
       <div className="flex items-center space-x-4">
         <button className="p-2">
           <Bell className="w-6 h-6 text-gray-600" />
@@ -73,7 +105,7 @@ const QuickActions = () => (
         <PlusSquare className="w-6 h-6 text-blue-600" />
         <div>
           <h3 className="font-medium">Request Records</h3>
-          <p className="text-sm text-gray-600">From your providers</p>
+          <p className="text-sm font-zen-dots text-gray-600">From your providers</p>
         </div>
       </CardContent>
     </Card>
