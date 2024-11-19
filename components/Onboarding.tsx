@@ -46,7 +46,7 @@ const Input: React.FC<InputProps> = ({ label, icon: Icon, error, helperText, ...
       </div>
       <input
         className={`w-full border rounded-lg py-2 pl-10 pr-3 
-          focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors
+          focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors
           ${error ? 'border-red-500' : 'border-gray-300'}`}
         {...props}
       />
@@ -60,7 +60,7 @@ const Input: React.FC<InputProps> = ({ label, icon: Icon, error, helperText, ...
 const WelcomeScreen: React.FC<{ onNext: () => void }> = ({ onNext }) => (
   <div className="space-y-6">
     <div className="text-center p-6">
-      <Shield className="w-16 h-16 mx-auto text-blue-600 mb-4" />
+      {/*<Shield className="w-16 h-16 mx-auto text-blue-600 mb-4" /> */}
       <h2 className="text-xl font-semibold mb-2">Secure Health Records</h2>
       <p className="text-gray-500">
         Take control of your medical data with Silo's secure platform
@@ -68,7 +68,7 @@ const WelcomeScreen: React.FC<{ onNext: () => void }> = ({ onNext }) => (
     </div>
     <button
       onClick={onNext}
-      className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
+      className="w-full bg-emerald-700 text-white py-3 rounded-lg hover:bg-emerald-800 transition-colors"
     >
       Get Started
     </button>
@@ -85,7 +85,7 @@ const PersonalInfoScreen: React.FC<{ onNext: () => void }> = ({ onNext }) => (
     </div>
     <button
       onClick={onNext}
-      className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors mt-6"
+      className="w-full bg-emerald-700 text-white py-3 rounded-lg hover:bg-emerald-800 transition-colors mt-6"
     >
       Continue
     </button>
@@ -97,7 +97,7 @@ const VerificationScreen: React.FC<{ onNext: () => void }> = ({ onNext }) => (
     <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
       <Camera className="w-12 h-12 mx-auto text-gray-400 mb-4" />
       <p className="text-gray-500 mb-4">Upload a photo of your health card</p>
-      <button className="bg-blue-50 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors">
+      <button className="bg-emerald-50 text-emerald-700 px-4 py-2 rounded-lg hover:bg-emerald-100 transition-colors">
         Upload Photo
       </button>
     </div>
@@ -111,7 +111,7 @@ const VerificationScreen: React.FC<{ onNext: () => void }> = ({ onNext }) => (
     </div>
     <button
       onClick={onNext}
-      className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
+      className="w-full bg-emerald-700 text-white py-3 rounded-lg hover:bg-emerald-800 transition-colors"
     >
       Verify Identity
     </button>
@@ -141,7 +141,7 @@ const SecurityScreen: React.FC<{ onNext: () => void }> = ({ onNext }) => (
     </div>
     <button
       onClick={onNext}
-      className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
+      className="w-full bg-emerald-700 text-white py-3 rounded-lg hover:bg-emerald-800 transition-colors"
     >
       Verify & Continue
     </button>
@@ -161,7 +161,7 @@ const CompleteScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) =>
     </div>
     <button 
       onClick={onComplete}
-      className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
+      className="w-full bg-emerald-700 text-white py-3 rounded-lg hover:bg-emerald-800 transition-colors"
     >
       Go to Dashboard
     </button>
@@ -231,7 +231,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
             <div
               key={s.id}
               className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                i <= step ? 'bg-blue-600 text-white' : 'bg-gray-200'
+                i <= step ? 'bg-emerald-800 text-white' : 'bg-gray-200'
               }`}
             >
               {i < step ? (
@@ -244,7 +244,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
         </div>
         <div className="h-2 bg-gray-200 rounded-full">
           <div
-            className="h-2 bg-blue-600 rounded-full transition-all duration-300"
+            className="h-2 bg-emerald-800 rounded-full transition-all duration-300"
             style={{ width: `${(step / (steps.length - 1)) * 100}%` }}
           />
         </div>

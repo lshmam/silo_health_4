@@ -55,7 +55,7 @@ interface DashboardProps {
 
 // Header Component
 const Header = () => (
-  <header className="px-4 py-3 bg-green-100
+  <header className="px-4 py-3 bg-emerald-700
    border-b">
     <div className="flex items-center justify-between">
     <Image
@@ -67,16 +67,16 @@ const Header = () => (
             className="h-10 w-auto"
           />
       <h1  className={orbitron.className} >
-        <span className = "text-3xl text-slate-800">
+        <span className = "text-3xl text-slate-50">
           Silo Health
         </span>
           </h1>
       <div className="flex items-center space-x-4">
         <button className="p-2">
-          <Bell className="w-6 h-6 text-gray-600" />
+          <Bell className="w-6 h-6 text-slate-50" />
         </button>
         <button className="p-2">
-          <Settings className="w-6 h-6 text-gray-600" />
+          <Settings className="w-6 h-6 text-slate-50" />
         </button>
       </div>
     </div>
@@ -91,7 +91,7 @@ const Header = () => (
         />
       </div>
       <button className="p-2 border rounded-lg">
-        <Filter className="w-5 h-5 text-gray-600" />
+        <Filter className="w-5 h-5 text-slate-50" />
       </button>
     </div>
   </header>
@@ -109,7 +109,7 @@ const QuickActions = () => (
         </div>
       </CardContent>
     </Card>
-    <Card className="bg-green-50 border-green-100">
+    <Card className="bg-slate-50 border-green-00">
       <CardContent className="p-4 flex items-center space-x-3">
         <Share2 className="w-6 h-6 text-green-600" />
         <div>
@@ -164,7 +164,7 @@ const RecentRecords: React.FC<{ onRecordSelect: (record: Record) => void }> = ({
             <button
               key={record.id}
               onClick={() => onRecordSelect(record)}
-              className="w-full flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+              className="w-full flex items-center p-3 bg-green-50 rounded-lg hover:bg-emerald-100 transition-colors"
             >
               {record.type === 'image' ? (
                 <Activity className="w-5 h-5 text-gray-600 mr-3" />
