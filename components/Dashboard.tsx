@@ -3,6 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 import {Roboto, Zen_Dots, Orbitron} from 'next/font/google'
+import Appointments from './Appointments';
+
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -96,6 +98,7 @@ const Header = () => (
     </div>
   </header>
 );
+
 
 // Quick Actions Component
 const QuickActions = () => (
@@ -210,6 +213,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onRecordSelect }) => {
       <Header />
       <main className="flex-1 overflow-y-auto p-4 space-y-4">
         <QuickActions />
+        <Appointments /> 
         <RecentRecords onRecordSelect={onRecordSelect} />
       </main>
       <Navigation />
